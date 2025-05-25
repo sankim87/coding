@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Apple SD Gothic Neo'}
+    span.s1 {font: 12.0px 'Apple SD Gothic Neo'}
+    span.s2 {font: 12.0px 'Apple Color Emoji'}
+    span.s3 {font: 12.0px Helvetica}
+    span.s4 {font: 12.0px 'Lucida Grande'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ko"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;<span class="s1">바이브</span> <span class="s1">코딩</span> <span class="s1">클래스</span>: <span class="s1">나만의</span> <span class="s1">프로젝트</span> <span class="s1">만들기</span>&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>Chosen Palette: "Warm Harmony" (Background: #FDFBF6, Text: #3C3633, Primary Accent: #73A9AD, Secondary Accent: #EEA47F, Card Background: #FEFBF3, Highlight Text: #0B5351)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>Application Structure Plan: Single-page application with a sticky top navigation for easy scrolling to sections. Sections mirror the coding class structure: Introduction, Step 1 (Idea Generation - with interactive examples), Step 2 (Coding Process), Step 3 (Sharing &amp; Feedback), and Teacher's Tips (accordion style). The goal is to present the class plan in an engaging, easy-to-follow interactive format, enhancing the original slideshow's usability. User flow is linear via scrolling or direct navigation.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>Visualization &amp; Content Choices:</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Overall Class Structure: Goal: Organize. Method: Thematic sections in SPA, navigated by sticky-nav. Interaction: Scroll-spy highlighting active section. Justification: Clear, linear presentation of class flow.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Step 1 Project Ideas (e.g., <span class="s1">숙제</span> <span class="s1">알림</span> <span class="s1">앱</span>, <span class="s1">팬</span> <span class="s1">페이지</span>): Goal: Inform/Organize. Method: Styled HTML cards for each idea category, using Unicode icons/emojis from source. Interaction: Hover effects on cards. Justification: Visually separates ideas, makes them scannable. No SVG/Mermaid.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Step 2 Coding Process (AI, Templates, Debugging): Goal: Inform. Method: Descriptive text blocks with icons. Justification: Clear explanation of coding phase. No SVG/Mermaid.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Step 3 Sharing (Presentation, Feedback): Goal: Inform. Method: Text blocks. Justification: Explains the sharing phase. No SVG/Mermaid.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- Teacher's Tips: Goal: Organize/Inform. Method: Accordion-style for each tip. Interaction: Click to expand/collapse. Justification: Saves space, allows focused reading. No SVG/Mermaid.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>- (Optional Chart) Student Project Preferences (Dummy Data): Goal: Compare. Method: Chart.js Bar Chart (Canvas). Interaction: Tooltips. Justification: Illustrative data point to make SPA more "data-like". Adheres to NO SVG. Label wrapping and tooltip config will be applied. (Chart not implemented in this version to keep focus on SPA structure for slideshow content).</p>
+<p class="p1"><span class="Apple-converted-space">        </span>CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Noto Sans KR', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FDFBF6; /* Warm Neutral Background */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #3C3633; /* Dark Neutral Text */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.sticky-nav {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: sticky;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 50;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(253, 251, 246, 0.85); /* Semi-transparent background */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(8px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-backdrop-filter: blur(8px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 4px rgba(0,0,0,0.05);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-link {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #3C3633;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: color 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-link:hover, .nav-link.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #73A9AD; /* Primary Accent */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #0B5351; /* Highlight Text */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FEFBF3; /* Card Background */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #EAE0D5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: box-shadow 0.3s ease, transform 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -2px rgba(0,0,0,0.05);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-3px);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #3C3633;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.125rem; /* 18px */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card-icon {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.75rem; /* 28px */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #EEA47F; /* Secondary Accent */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.accordion-button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FEFBF3;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #EAE0D5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #3C3633;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background-color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.accordion-button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #F9F5EF;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.accordion-content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #FFFFFF;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #EAE0D5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-top: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.highlight {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #73A9AD; /* Primary Accent */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-placeholder-image {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #EAE0D5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #8A7F7C;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 150px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 1rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="antialiased"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav id="mainNav" class="sticky-nav py-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4 flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#" class="text-xl font-bold" style="color: #0B5351;"&gt;<span class="s1">바이브</span> <span class="s1">코딩</span> <span class="s1">클래스</span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-x-4 md:space-x-6 text-sm md:text-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#intro" class="nav-link font-medium"&gt;<span class="s1">시작하기</span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#step1" class="nav-link font-medium"&gt;1<span class="s1">단계</span>: <span class="s1">아이디어</span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#step2" class="nav-link font-medium"&gt;2<span class="s1">단계</span>: <span class="s1">코딩</span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#step3" class="nav-link font-medium"&gt;3<span class="s1">단계</span>: <span class="s1">공유</span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#tips" class="nav-link font-medium"&gt;<span class="s1">쌤의</span> <span class="s1">꿀팁</span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="intro" class="py-16 md:py-24 text-center bg-gradient-to-b from-[#FDFBF6] to-[#FEFBF3]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: #0B5351;"&gt;<span class="s2">🌟</span> <span class="s1">바이브</span> <span class="s1">코딩</span>: <span class="s1">너만의</span> <span class="s1">세상</span> <span class="s1">만들기</span> <span class="s1">프로젝트</span>! <span class="s2">🌟</span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span><span class="s1">안녕</span> <span class="s1">친구들</span>! <span class="s1">우리</span> <span class="s1">이제</span> <span class="s1">바이브</span> <span class="s1">코딩으로</span> <span class="s1">너희가</span> <span class="s1">진짜</span> <span class="s1">만들고</span> <span class="s1">싶었던</span> <span class="s1">걸</span> <span class="s1">직접</span> <span class="s1">만들어볼</span> <span class="s1">시간이야</span>! &lt;br class="hidden md:inline"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span><span class="s1">코딩이</span> <span class="s1">어렵다고</span>? &lt;span class="highlight"&gt;<span class="s1">노노</span>!&lt;/span&gt; <span class="s1">우리</span> <span class="s1">같이</span> <span class="s1">재미있게</span> <span class="s1">놀면서</span> <span class="s1">너만의</span> <span class="s1">특별한</span> <span class="s1">프로젝트를</span> <span class="s1">완성해볼</span> <span class="s1">거야</span>. <span class="s1">준비됐지</span>? &lt;span class="highlight"&gt;<span class="s1">레고</span>!&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="#step1" class="px-8 py-3 bg-[#73A9AD] text-white font-semibold rounded-lg shadow-md hover:bg-[#62929E] transition duration-300 text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span><span class="s1">프로젝트</span> <span class="s1">시작하기</span>!</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="step1" class="py-16 md:py-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl section-title text-center"&gt;1<span class="s1">단계</span>: <span class="s1">아이디어</span> <span class="s1">폭발</span>! <span class="s2">🚀</span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="section-placeholder-image"&gt;[<span class="s1">학생들이</span> <span class="s1">아이디어를</span> <span class="s1">브레인스토밍하는</span> <span class="s1">활기찬</span> <span class="s1">이미지</span>]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-center text-lg mb-10 max-w-3xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span><span class="s1">이</span> <span class="s1">단계가</span> <span class="s1">진짜</span> <span class="s1">중요해</span>! <span class="s1">네가</span> <span class="s1">진짜</span> <span class="s1">만들고</span> <span class="s1">싶은</span> <span class="s1">게</span> <span class="s1">뭔지</span> <span class="s1">찾아내는</span> <span class="s1">시간이야</span>. <span class="s1">너무</span> <span class="s1">거창할</span> <span class="s1">필요</span> <span class="s1">없어</span>! <span class="s1">네</span> <span class="s1">일상에서</span> '&lt;span class="highlight"&gt;<span class="s1">아</span>, <span class="s1">이거</span> <span class="s1">좀</span> <span class="s1">불편한데</span>?&lt;/span&gt;' <span class="s1">했던</span> <span class="s1">거나</span>, <span class="s1">네가</span> <span class="s1">좋아하는</span> <span class="s1">것들</span>, <span class="s1">친구들이랑</span> <span class="s1">같이</span> <span class="s1">하면</span> <span class="s1">재밌을</span> <span class="s1">것</span> <span class="s1">같은</span> <span class="s1">것들을</span> <span class="s1">막</span> <span class="s1">떠올려봐</span>!</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="card-icon"&gt;<span class="s2">🤔</span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="card-title"&gt;<span class="s1">내가</span> <span class="s1">불편했던</span> <span class="s1">건</span>?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="list-disc list-inside space-y-1 text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;span class="highlight"&gt;<span class="s1">숙제</span> <span class="s1">알림</span> <span class="s1">앱</span>:&lt;/span&gt; "<span class="s1">맨날</span> <span class="s1">까먹는</span> <span class="s1">숙제</span>, <span class="s1">이제</span> <span class="s1">앱이</span> <span class="s1">알려줄</span> <span class="s1">거야</span>! <span class="s1">대박이지</span>?"&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;span class="highlight"&gt;<span class="s1">급식</span> <span class="s1">메뉴</span> <span class="s1">투표</span> <span class="s1">웹</span>:&lt;/span&gt; "<span class="s1">오늘</span> <span class="s1">점심</span> <span class="s1">뭐</span> <span class="s1">먹지</span>? <span class="s1">친구들이랑</span> <span class="s1">투표해서</span> <span class="s1">정해봐</span>! <span class="s1">완전</span> <span class="s1">편할</span> <span class="s1">걸</span>?"&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;span class="highlight"&gt;<span class="s1">나만의</span> <span class="s1">스케줄러</span>:&lt;/span&gt; "<span class="s1">내</span> <span class="s1">하루를</span> <span class="s1">코딩으로</span> <span class="s1">정리하는</span> <span class="s1">나만의</span> <span class="s1">플래너</span>! <span class="s1">완전</span> <span class="s1">멋지겠다</span>!"&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="card-icon"&gt;<span class="s2">💖</span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="card-title"&gt;<span class="s1">내</span> <span class="s1">덕질을</span> <span class="s1">위한</span> <span class="s1">서비스</span>?&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="list-disc list-inside space-y-1 text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;span class="highlight"&gt;<span class="s1">최애</span> <span class="s1">팬</span> <span class="s1">페이지</span>:&lt;/span&gt; "<span class="s1">우리</span> <span class="s1">덕질용</span> <span class="s1">웹페이지</span> <span class="s1">만들어서</span> <span class="s1">사진</span>, <span class="s1">움짤</span>, <span class="s1">최신</span> <span class="s1">소식</span> <span class="s1">다</span> <span class="s1">모아두는</span> <span class="s1">거야</span>! <span class="s1">와</span>, <span class="s1">생각만</span> <span class="s1">해도</span> <span class="s1">좋다</span>!"&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;span class="highlight"&gt;<span class="s1">게임</span> <span class="s1">공략집</span> <span class="s1">웹</span>:&lt;/span&gt; "<span class="s1">내가</span> <span class="s1">제일</span> <span class="s1">잘하는</span> <span class="s1">게임</span>, <span class="s1">나만의</span> <span class="s1">꿀팁</span> <span class="s1">공략집</span> <span class="s1">웹페이지로</span> <span class="s1">만들어서</span> <span class="s1">공유해봐</span>! <span class="s1">친구들한테</span> <span class="s1">자랑도</span> <span class="s1">하고</span>!"&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;span class="highlight"&gt;<span class="s1">나만의</span> <span class="s1">덕질</span> <span class="s1">일기장</span>:&lt;/span&gt; "<span class="s1">사진이랑</span> <span class="s1">글</span> <span class="s1">올리는</span> <span class="s1">나만의</span> <span class="s1">비공개</span> <span class="s1">일기장이나</span> <span class="s1">취미</span> <span class="s1">기록</span> <span class="s1">웹페이지도</span> <span class="s1">가능</span>! <span class="s1">완전</span> <span class="s1">비밀</span> <span class="s1">아지트</span>!"&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card md:col-span-2 lg:col-span-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;div class="flex items-center mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="card-icon"&gt;<span class="s2">🎮</span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="card-title"&gt;<span class="s1">세상에</span> <span class="s1">없는</span> <span class="s1">나만의</span> <span class="s1">것</span>!&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="list-disc list-inside space-y-1 text-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;span class="highlight"&gt;<span class="s1">나만의</span> O, X <span class="s1">퀴즈</span>:&lt;/span&gt; "<span class="s1">친구들이랑</span> <span class="s1">같이</span> <span class="s1">풀어볼</span> <span class="s1">수</span> <span class="s1">있는</span> <span class="s1">나만의</span> O, X <span class="s1">퀴즈</span> <span class="s1">게임을</span> <span class="s1">만들어서</span> '<span class="s1">코딩</span> <span class="s1">덕후</span>' <span class="s1">능력</span> <span class="s1">뽐내봐</span>! <span class="s1">진짜</span> <span class="s1">재밌을</span> <span class="s1">거야</span>!"&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;span class="highlight"&gt;<span class="s1">오늘의</span> TMI <span class="s1">생성기</span>:&lt;/span&gt; "<span class="s1">버튼</span> <span class="s1">누르면</span> '<span class="s1">오늘의</span> <span class="s1">나</span>'<span class="s1">에</span> <span class="s1">대한</span> <span class="s1">재미있는</span> TMI<span class="s1">를</span> <span class="s1">랜덤으로</span> <span class="s1">띄워주는</span> <span class="s1">웹페이지</span>! <span class="s1">완전</span> <span class="s1">웃길</span> <span class="s1">걸</span>?"&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;span class="highlight"&gt;<span class="s1">간단</span> <span class="s1">심리</span> <span class="s1">테스트</span>:&lt;/span&gt; "<span class="s1">궁금한</span> <span class="s1">심리</span> <span class="s1">테스트나</span> <span class="s1">친구들과</span> <span class="s1">해볼</span> <span class="s1">수</span> <span class="s1">있는</span> MBTI <span class="s1">유형</span> <span class="s1">테스트</span> <span class="s1">같은</span> <span class="s1">것도</span> <span class="s1">만들</span> <span class="s1">수</span> <span class="s1">있어</span>! <span class="s1">와</span>, <span class="s1">신기하다</span>!"&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex items-center justify-center mb-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="card-icon"&gt;<span class="s2">✍️</span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="card-title"&gt;<span class="s1">종이에</span> <span class="s1">미리</span> <span class="s1">그려봐</span>! (<span class="s1">페이퍼</span> <span class="s1">프로토타이핑</span>)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span><span class="s1">코딩하기</span> <span class="s1">전에</span> <span class="s1">네가</span> <span class="s1">만들</span> <span class="s1">앱이나</span> <span class="s1">웹페이지가</span> <span class="s1">어떻게</span> <span class="s1">생겼으면</span> <span class="s1">좋겠는지</span> <span class="s1">종이에</span> <span class="s1">대충</span> <span class="s1">그려보는</span> <span class="s1">거야</span>. "<span class="s1">여기</span> <span class="s1">누르면</span> <span class="s1">이</span> <span class="s1">화면</span> <span class="s1">나와요</span>!" <span class="s1">식으로</span>! <span class="s1">이걸</span> <span class="s1">미리</span> <span class="s1">해보면</span> <span class="s1">나중에</span> <span class="s1">코딩할</span> <span class="s1">때</span> <span class="s1">훨씬</span> <span class="s1">쉽고</span>, <span class="s1">시간도</span> <span class="s1">아낄</span> <span class="s1">수</span> <span class="s1">있어</span>! &lt;span class="highlight"&gt;<span class="s1">진짜</span> <span class="s1">꿀팁이야</span>!&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="step2" class="py-16 md:py-20 bg-[#FEFBF3]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl section-title text-center"&gt;2<span class="s1">단계</span>: <span class="s1">코딩</span> <span class="s1">마법</span> <span class="s1">시작</span>! <span class="s2">✨</span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="section-placeholder-image"&gt;[<span class="s1">학생들이</span> <span class="s1">노트북으로</span> <span class="s1">코딩하는</span> <span class="s1">집중하는</span> <span class="s1">모습의</span> <span class="s1">이미지</span>]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-center text-lg mb-10 max-w-3xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span><span class="s1">이제</span> <span class="s1">네가</span> <span class="s1">생각한</span> <span class="s1">아이디어를</span> <span class="s1">코딩으로</span> <span class="s1">진짜</span> <span class="s1">만들어볼</span> <span class="s1">시간이야</span>! <span class="s1">처음부터</span> <span class="s1">너무</span> <span class="s1">완벽하게</span> <span class="s1">만들려고</span> <span class="s1">하지</span> <span class="s1">마</span>. <span class="s1">작은</span> <span class="s1">기능부터</span> <span class="s1">하나씩</span> <span class="s1">완성해나가면서</span> <span class="s1">코딩의</span> <span class="s1">재미를</span> <span class="s1">느껴봐</span>! &lt;span class="highlight"&gt;<span class="s1">와</span>, <span class="s1">진짜</span> <span class="s1">신기할</span> <span class="s1">걸</span>?&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-3 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="card-title text-center mb-4"&gt;<span class="s2">🤖</span> AI<span class="s1">와</span> <span class="s1">함께하는</span> <span class="s1">바이브</span> <span class="s1">코딩</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-center"&gt;<span class="s1">쌤이</span> <span class="s1">안내하는</span> <span class="s1">순서를</span> <span class="s1">따라</span> &lt;span class="highlight"&gt;AI <span class="s1">기반</span> <span class="s1">바이브</span> <span class="s1">코딩</span>&lt;/span&gt;<span class="s1">을</span> <span class="s1">이용하면</span> <span class="s1">훨씬</span> <span class="s1">쉽고</span> <span class="s1">빠르게</span> <span class="s1">코딩할</span> <span class="s1">수</span> <span class="s1">있어</span>! <span class="s1">완전</span> <span class="s1">든든할</span> <span class="s1">거야</span>!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="card-title text-center mb-4"&gt;<span class="s2">🧩</span> <span class="s1">템플릿</span> &amp; <span class="s1">예제</span> <span class="s1">활용</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-center"&gt;<span class="s1">아무것도</span> <span class="s1">없는</span> <span class="s1">백지에서</span> <span class="s1">시작하는</span> <span class="s1">것보다</span>, <span class="s1">바이브</span> <span class="s1">코딩에서</span> <span class="s1">제공하는</span> &lt;span class="highlight"&gt;<span class="s1">템플릿이나</span> <span class="s1">비슷한</span> <span class="s1">예제</span> <span class="s1">코드</span>&lt;/span&gt;<span class="s1">를</span> <span class="s1">변형해서</span> <span class="s1">사용하면</span> <span class="s1">훨씬</span> <span class="s1">쉽고</span> <span class="s1">빠르게</span> <span class="s1">시작할</span> <span class="s1">수</span> <span class="s1">있어</span>! <span class="s1">막막하지</span> <span class="s1">않을</span> <span class="s1">거야</span>!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="card-title text-center mb-4"&gt;<span class="s2">🛠️</span> '<span class="s1">삽질</span>'<span class="s1">의</span> <span class="s1">미학</span> &amp; <span class="s1">디버깅</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-center"&gt;<span class="s1">코딩하다가</span> <span class="s1">오류가</span> <span class="s1">나는</span> <span class="s1">건</span> <span class="s1">완전</span> <span class="s1">당연한</span> <span class="s1">일</span>! <span class="s1">그</span> <span class="s1">오류를</span> <span class="s1">찾아내고</span> <span class="s1">고치는</span> <span class="s1">과정에서</span> <span class="s1">진짜</span> <span class="s1">많이</span> <span class="s1">배우게</span> <span class="s1">될</span> <span class="s1">거야</span>. <span class="s1">마치</span> &lt;span class="highlight"&gt;<span class="s1">숨은</span> <span class="s1">그림</span> <span class="s1">찾기</span>&lt;/span&gt; <span class="s1">하는</span> <span class="s1">것처럼</span> <span class="s1">말이야</span>! <span class="s1">쌤이</span> <span class="s1">옆에서</span> <span class="s1">힌트를</span> <span class="s1">줄</span> <span class="s1">테니</span> <span class="s1">스스로</span> <span class="s1">해결하는</span> <span class="s1">재미를</span> <span class="s1">느껴봐</span>! <span class="s1">진짜</span> <span class="s1">뿌듯할</span> <span class="s1">걸</span>?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="step3" class="py-16 md:py-20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl section-title text-center"&gt;3<span class="s1">단계</span>: <span class="s1">결과</span> <span class="s1">공유</span> &amp; <span class="s1">피드백</span> <span class="s1">타임</span>! <span class="s2">🌈</span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="section-placeholder-image"&gt;[<span class="s1">학생들이</span> <span class="s1">자신의</span> <span class="s1">코딩</span> <span class="s1">프로젝트를</span> <span class="s1">발표하고</span> <span class="s1">친구들이</span> <span class="s1">격려하는</span> <span class="s1">이미지</span>]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-center text-lg mb-10 max-w-3xl mx-auto"&gt;</p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">                </span></span>네가<span class="s3"> </span>열심히<span class="s3"> </span>만든<span class="s3"> </span>프로젝트를<span class="s3"> </span>친구들<span class="s3"> </span>앞에서<span class="s3"> </span>발표하는<span class="s3"> </span>시간이야<span class="s3">! </span>잘<span class="s3"> </span>만들었든<span class="s3"> </span>아니든<span class="s3">, </span>스스로<span class="s3"> </span>만든<span class="s3"> </span>걸<span class="s3"> </span>보여주는<span class="s3"> </span>경험은<span class="s3"> </span>엄청<span class="s3"> </span>중요해<span class="s3">. </span>그리고<span class="s3"> </span>친구들의<span class="s3"> </span>피드백을<span class="s3"> </span>들으면서<span class="s3"> </span>더<span class="s3"> </span>멋진<span class="s3"> </span>아이디어를<span class="s3"> </span>얻을<span class="s3"> </span>수도<span class="s3"> </span>있어<span class="s3">! &lt;span class="highlight"&gt;</span>와<span class="s3">, </span>기대된다<span class="s3">!&lt;/span&gt;</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="card-title text-center mb-4"&gt;<span class="s2">📢</span> <span class="s1">발표</span> <span class="s1">시간</span>!&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-center"&gt;"<span class="s1">제가</span> <span class="s1">만든</span> <span class="s1">이건</span> ~<span class="s1">기능이</span> <span class="s1">있어요</span>!" <span class="s1">하고</span> <span class="s1">자신감</span> <span class="s1">있게</span> <span class="s1">보여줘</span>! &lt;span class="highlight"&gt;<span class="s1">완전</span> <span class="s1">멋질</span> <span class="s1">거야</span>!&lt;/span&gt; <span class="s1">네가</span> <span class="s1">만든</span> <span class="s1">작품을</span> <span class="s1">친구들에게</span> <span class="s1">소개하고</span>, <span class="s1">어떤</span> <span class="s1">점이</span> <span class="s1">특별한지</span> <span class="s1">이야기해보자</span>.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="card-title text-center mb-4"&gt;<span class="s2">💬</span> '<span class="s1">칭찬</span>'<span class="s1">과</span> '<span class="s1">개선점</span>' <span class="s1">피드백</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-center"&gt;<span class="s1">친구들끼리</span> <span class="s1">서로</span> <span class="s1">칭찬해주고</span>, "<span class="s1">여기에</span> <span class="s1">이런</span> <span class="s1">기능이</span> <span class="s1">추가되면</span> <span class="s1">더</span> <span class="s1">좋을</span> <span class="s1">것</span> <span class="s1">같아요</span>!" <span class="s1">하고</span> &lt;span class="highlight"&gt;<span class="s1">건설적인</span> <span class="s1">피드백</span>&lt;/span&gt;<span class="s1">을</span> <span class="s1">주고받자</span>. <span class="s1">비난이나</span> <span class="s1">지적보다는</span> <span class="s1">격려와</span> <span class="s1">발전적인</span> <span class="s1">이야기가</span> <span class="s1">오가는</span> <span class="s1">분위기를</span> <span class="s1">만드는</span> <span class="s1">게</span> <span class="s1">중요해</span>! <span class="s1">우리</span> <span class="s1">모두</span> <span class="s1">같이</span> <span class="s1">성장하는</span> <span class="s1">거지</span>!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="tips" class="py-16 md:py-20 bg-[#FEFBF3]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl section-title text-center"&gt;<span class="s1">쌤의</span> <span class="s1">꿀팁</span>! <span class="s2">💖</span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">             </span>&lt;div class="section-placeholder-image"&gt;[<span class="s1">선생님이</span> <span class="s1">학생에게</span> 1:1<span class="s1">로</span> <span class="s1">코딩</span> <span class="s1">도움을</span> <span class="s1">주며</span> <span class="s1">격려하는</span> <span class="s1">따뜻한</span> <span class="s1">이미지</span>]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-center text-lg mb-10 max-w-3xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span><span class="s1">코딩이</span> '<span class="s1">공부</span>'<span class="s1">처럼</span> <span class="s1">느껴지지</span> <span class="s1">않게</span>, <span class="s1">계속</span> <span class="s1">재미있게</span> <span class="s1">즐길</span> <span class="s1">수</span> <span class="s1">있도록</span> <span class="s1">쌤이</span> <span class="s1">도와줄</span> <span class="s1">거야</span>! &lt;span class="highlight"&gt;<span class="s1">걱정</span> <span class="s1">마</span>!&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="accordionContainer" class="space-y-3 max-w-2xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="accordion-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="accordion-button w-full text-left p-4 rounded-t-lg font-semibold flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>AI<span class="s1">와</span> <span class="s1">함께하는</span> <span class="s1">성장</span> <span class="s2">🚀</span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="accordion-icon transform transition-transform duration-300 "&gt;<span class="s4">▼</span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="accordion-content p-4 rounded-b-lg hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm"&gt;&lt;span class="highlight"&gt;AI<span class="s1">와</span> <span class="s1">함께</span>&lt;/span&gt; <span class="s1">지속적으로</span> <span class="s1">수정하고</span> <span class="s1">보완하며</span> <span class="s1">너만의</span> <span class="s1">최종</span> <span class="s1">결과물을</span> <span class="s1">만들어갈</span> <span class="s1">수</span> <span class="s1">있어</span>! <span class="s1">완전</span> <span class="s1">든든한</span> <span class="s1">조력자가</span> <span class="s1">될</span> <span class="s1">거야</span>! AI<span class="s1">에게</span> <span class="s1">질문하고</span>, <span class="s1">아이디어를</span> <span class="s1">얻고</span>, <span class="s1">코드</span> <span class="s1">오류도</span> <span class="s1">찾아달라고</span> <span class="s1">해봐</span>!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="accordion-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="accordion-button w-full text-left p-4 font-semibold flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span><span class="s1">놀이처럼</span> <span class="s1">배우기</span> <span class="s2">🎮</span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="accordion-icon transform transition-transform duration-300 "&gt;<span class="s4">▼</span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="accordion-content p-4 rounded-b-lg hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm"&gt;<span class="s1">코딩이</span> &lt;span class="highlight"&gt;<span class="s1">게임처럼</span> <span class="s1">느껴지게</span>&lt;/span&gt; <span class="s1">다양한</span> <span class="s1">챌린지나</span> <span class="s1">미션을</span> <span class="s1">줄</span> <span class="s1">수도</span> <span class="s1">있어</span>! <span class="s1">예를</span> <span class="s1">들어</span>, '<span class="s1">가장</span> <span class="s1">웃긴</span> <span class="s1">버그</span> <span class="s1">만들기</span>' <span class="s1">같은</span> <span class="s1">장난스러운</span> <span class="s1">미션도</span> <span class="s1">괜찮아</span>. <span class="s1">친구들과</span> <span class="s1">함께</span> <span class="s1">작은</span> <span class="s1">코딩</span> <span class="s1">게임을</span> <span class="s1">만들어보는</span> <span class="s1">것도</span> <span class="s1">좋아</span>!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="accordion-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="accordion-button w-full text-left p-4 font-semibold flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span><span class="s1">작은</span> <span class="s1">성공</span> <span class="s1">맛보기</span> <span class="s2">🏆</span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="accordion-icon transform transition-transform duration-300 "&gt;<span class="s4">▼</span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="accordion-content p-4 rounded-b-lg hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm"&gt;<span class="s1">매</span> <span class="s1">시간마다</span> <span class="s1">네가</span> <span class="s1">뭘</span> <span class="s1">만들었는지</span> <span class="s1">눈으로</span> <span class="s1">확인하고</span>, &lt;span class="highlight"&gt;<span class="s1">작은</span> <span class="s1">성공에도</span> <span class="s1">크게</span> <span class="s1">칭찬해줄게</span>!&lt;/span&gt; '<span class="s1">와</span>, <span class="s1">버튼</span> <span class="s1">하나</span> <span class="s1">만들었다</span>! <span class="s1">대단해</span>!' <span class="s1">이런</span> <span class="s1">작은</span> <span class="s1">성취들이</span> <span class="s1">모여서</span> <span class="s1">큰</span> <span class="s1">자신감이</span> <span class="s1">될</span> <span class="s1">거야</span>!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="accordion-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="accordion-button w-full text-left p-4 rounded-b-lg font-semibold flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span><span class="s1">번아웃</span> <span class="s1">방지</span> <span class="s2">🧘</span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="accordion-icon transform transition-transform duration-300 "&gt;<span class="s4">▼</span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="accordion-content p-4 rounded-b-lg hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm"&gt;<span class="s1">너무</span> <span class="s1">어렵거나</span> <span class="s1">복잡하게</span> <span class="s1">만들려고</span> <span class="s1">지치지</span> <span class="s1">마</span>. <span class="s1">힘들면</span> <span class="s1">잠시</span> <span class="s1">쉬어가거나</span>, <span class="s1">더</span> <span class="s1">쉬운</span> <span class="s1">목표를</span> <span class="s1">제시해줄게</span>! <span class="s1">코딩은</span> <span class="s1">마라톤과</span> <span class="s1">같아</span>. &lt;span class="highlight"&gt;<span class="s1">우리</span> <span class="s1">같이</span> <span class="s1">즐겁게</span>, <span class="s1">꾸준히</span>&lt;/span&gt; <span class="s1">해보자</span>!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-16 md:py-24 text-center bg-gradient-to-t from-[#FDFBF6] to-[#FEFBF3]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: #0B5351;"&gt;<span class="s1">이제</span> <span class="s1">너의</span> <span class="s1">상상을</span> <span class="s1">코딩으로</span> <span class="s1">현실로</span> <span class="s1">만들</span> <span class="s1">시간</span>!&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span><span class="s1">우리</span> <span class="s1">함께</span> <span class="s1">최고의</span> <span class="s1">프로젝트를</span> <span class="s1">만들어보자</span>! <span class="s1">지금</span> <span class="s1">바로</span> <span class="s1">시작해볼까</span>? &lt;span class="highlight"&gt;<span class="s2">🤩</span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="alert('<span class="s1">코딩</span> <span class="s1">프로젝트</span> <span class="s1">시작</span>! <span class="s1">화이팅</span>! <span class="s2">🎉</span>')" class="px-10 py-4 bg-[#EEA47F] text-white font-bold rounded-lg shadow-lg hover:bg-[#D8906C] transition duration-300 text-xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span><span class="s1">나만의</span> <span class="s1">프로젝트</span> <span class="s1">시작</span>!</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="text-center py-8 border-t" style="border-color: #EAE0D5;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-sm"&gt;&amp;copy; 2025 <span class="s1">바이브</span> <span class="s1">코딩</span> <span class="s1">클래스</span>. All Rights Reserved.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-xs text-gray-500 mt-1"&gt;<span class="s1">이</span> <span class="s1">웹페이지는</span> <span class="s1">교육</span> <span class="s1">목적으로</span> <span class="s1">제작되었습니다</span>.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Smooth scrolling for navigation links</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('a[href^="#"]').forEach(anchor =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>anchor.addEventListener('click', function (e) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const targetId = this.getAttribute('href');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const targetElement = document.querySelector(targetId);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (targetElement) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>targetElement.scrollIntoView({</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>behavior: 'smooth'</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Accordion functionality</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const accordionItems = document.querySelectorAll('.accordion-item');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>accordionItems.forEach(item =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const button = item.querySelector('.accordion-button');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const content = item.querySelector('.accordion-content');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const icon = button.querySelector('.accordion-icon');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>button.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const isExpanded = content.classList.contains('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Close all other accordions</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// accordionItems.forEach(otherItem =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="Apple-converted-space">    </span>if (otherItem !== item) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="Apple-converted-space">        </span>otherItem.querySelector('.accordion-content').classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="Apple-converted-space">        </span>otherItem.querySelector('.accordion-button .accordion-icon').classList.remove('rotate-180');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// <span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// });</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Toggle current accordion</p>
+<p class="p1"><span class="Apple-converted-space">                </span>content.classList.toggle('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon.classList.toggle('rotate-180');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Active nav link highlighting on scroll (simple version)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const sections = document.querySelectorAll('section[id]');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const navLinks = document.querySelectorAll('#mainNav a.nav-link');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.addEventListener('scroll', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let current = '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>sections.forEach(section =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const sectionTop = section.offsetTop;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const sectionHeight = section.clientHeight;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (pageYOffset &gt;= (sectionTop - sectionHeight / 3)) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>current = section.getAttribute('id');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>navLinks.forEach(link =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>link.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (link.getAttribute('href').substring(1) === current) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>link.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
